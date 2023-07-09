@@ -41,4 +41,11 @@ func Test_totalPrice(t *testing.T) {
 			want: 0,
 		},
 	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := totalPrice(tt.args.nights, tt.args.rate, tt.args.cityTax); got != tt.want {
+				t.Errorf("totalPrice()= %v,want v", got, tt.want)
+			}
+		})
+	}
 }
