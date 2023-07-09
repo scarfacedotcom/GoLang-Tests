@@ -18,27 +18,27 @@ func TestTotalPrice(t *testing.T) {
 		{
 			name: "test 0 nights",
 			args: parameters{nights: 0, rate: 150, cityTax: 12},
-			want: 0,
+			want: 12,
 		},
 		{
 			name: "test 1 nights",
 			args: parameters{nights: 1, rate: 100, cityTax: 12},
-			want: 0,
+			want: 112,
 		},
 		{
 			name: "test 2 nights",
 			args: parameters{nights: 2, rate: 100, cityTax: 12},
-			want: 0,
+			want: 212,
 		},
 		{
 			name: "test 3 nights",
 			args: parameters{nights: 3, rate: 100, cityTax: 12},
-			want: 0,
+			want: 312,
 		},
 		{
 			name: "test 4 nights",
 			args: parameters{nights: 4, rate: 100, cityTax: 12},
-			want: 0,
+			want: 412,
 		},
 	}
 	for _, tt := range tests {
